@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card</title>
+  <style>
+    /* 1) Base setup */
+    :root {
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-dark: #1e40af;
+      --shadow: 0 10px 20px rgba(0,0,0,0.08), 0 6px 6px rgba(0,0,0,0.06);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box; /* Use border-box for predictable sizing (content + padding + border) */
+    }
+
+    body {
+      margin: 0; /* Body default margin removed to control layout explicitly */
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: var(--text);
+    }
+
+    /* 2) Card container (box model in action) */
+    .card {
+      width: 100%;
+      max-width: 360px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);        /* Shadow effect */
+      border: 1px solid #e5e7eb;        /* Border (part of the box model) */
+      padding: 20px;                    /* Padding (space inside the border) */
+      margin: 16px;                     /* Margin (space outside the border) */
+    }
+
+    /* 3) Profile image */
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;               /* Rounded (circle) */
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 16px;              /* Center horizontally + gap below */
+      border: 3px solid #f1f5f9;        /* Subtle ring */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    /* 4) Text content */
+    .name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+
+    .bio {
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0 0 16px;
+    }
+
+    /* 5) Button */
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;               /* Padding defines the clickable area */
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 999px;             /* Fully rounded corners (pill) */
+      box-shadow: 0 6px 14px rgba(37,99,235,0.25);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-dark);
+      box-shadow: 0 8px 18px rgba(30,64,175,0.28);
+      transform: translateY(-1px);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <article class="card" role="region" aria-label="Profile card">
+    <img
+      class="avatar"
+      src="https://media.licdn.com/dms/image/v2/D5603AQHMjYHbJIlFpg/profile-displayphoto-shrink_400_400/B56ZbaD8A5H0Ag-/0/1747415188989?e=1761177600&v=beta&t=qABabjnXy5QwbZwNEzv94omh70-Tn_fiqeTAd1yWyRE"
+      alt="Profile photo of Karan" />
+
+    <h2 class="name">Karan Kumar</h2>
+
+    <p class="bio">
+      Backend engineer who turns complex ideas into Reality. Coffee-powered, CSS-obsessed, and always shipping.
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="https://www.linkedin.com/in/kumar-karan-/" aria-label="Connect with Alex">Connect</a>
+    </div>
+  </article>
+</body>
+</html>
