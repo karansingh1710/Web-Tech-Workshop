@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Records</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      max-width: 800px;
+      margin: auto;
+      overflow-y: auto;
+      max-height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      background-color: #007BFF;
+      color: white;
+      z-index: 1;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: #e0f0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee Records</h2>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Email</th>
+          <th>Joining Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>Amit Sharma</td>
+          <td>HR</td>
+          <td>amit.sharma@example.com</td>
+          <td>2022-01-15</td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Priya Verma</td>
+          <td>Finance</td>
+          <td>priya.verma@example.com</td>
+          <td>2021-11-10</td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>Rahul Singh</td>
+          <td>IT</td>
+          <td>rahul.singh@example.com</td>
+          <td>2023-03-05</td>
+        </tr>
+        <tr>
+          <td>104</td>
+          <td>Neha Gupta</td>
+          <td>Marketing</td>
+          <td>neha.gupta@example.com</td>
+          <td>2020-07-22</td>
+        </tr>
+        <tr>
+          <td>105</td>
+          <td>Vikram Joshi</td>
+          <td>Operations</td>
+          <td>vikram.joshi@example.com</td>
+          <td>2019-09-30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
